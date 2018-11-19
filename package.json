@@ -10,5 +10,8 @@
     "smart-comp": "bin/smart-comp"
   },
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "minimist": "^1.2.0"
+  }
 }
