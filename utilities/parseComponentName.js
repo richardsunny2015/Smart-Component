@@ -3,8 +3,9 @@ const parseComponentName = (fileStr) => {
     if (!fileStr) return ''
     const splitted = fileStr.split('/')
     const fileName = splitted[splitted.length - 1]
-    const newFileStr = fileName.slice(0, 1).toUpperCase() + fileName.slice(1)
-    if (fileName.lastIndexOf('.') < 0) return `${newFileStr}.js`
+    let newFileStr = fileName.slice(0, 1).toUpperCase() + fileName.slice(1)
+    const extensionIndex = newFileStr.indexOf('.')
+    if (extensionIndex > -1) newFileStr = newFileStr.slice(0, extensionIndex)
 
     return newFileStr
 }
