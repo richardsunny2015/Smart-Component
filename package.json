@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "bin": {
     "smart-comp": "bin/smart-comp"
@@ -12,6 +12,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.2.0",
     "minimist": "^1.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^5.2.0"
   }
 }
