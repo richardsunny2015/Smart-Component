@@ -1,3 +1,4 @@
 const parseComponentName = require('./parseComponentName')
+const appendFileExtension = require('./appendFileExtension')
 
-module.exports = {parseComponentName}
+module.exports = {parseComponentName, appendFileExtension}
