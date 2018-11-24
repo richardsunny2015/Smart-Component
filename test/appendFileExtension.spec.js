@@ -22,4 +22,8 @@ describe('appendFileExtension', () => {
       expect(appendFileExtension('components/SomeComponent')).to.equal('components/SomeComponent.js')
       expect(appendFileExtension('client/public/components/anotherComponent')).to.equal('client/public/components/anotherComponent.js')
   })
+  it('throws errors if it specifies an incorrect ext.', () => {
+      expect(() => appendFileExtension('SomeComponent.blah')).to.throw()
+      expect(() => appendFileExtension('components/someComponent.blah')).to.throw()
+  })
 });
