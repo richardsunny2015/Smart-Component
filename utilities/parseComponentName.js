@@ -1,4 +1,4 @@
-const parseComponentName = (fileStr) => {
+const parseComponentName = fileStr => {
     // split the string by '/' and make alterations to the last string in the array
     if (!fileStr) return ''
     const splitted = fileStr.split('/')
