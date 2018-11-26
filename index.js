@@ -1,5 +1,6 @@
 const minimist = require('minimist')
 const fs = require('fs')
+const {createSmartComp} = require('./utilities')
 
 module.exports = () => {
     const args = minimist(process.argv.slice(2)) // no flags saves all arguments in '_' property
@@ -8,7 +9,7 @@ module.exports = () => {
     const component = args._[0]
 
     // Assumption: we're creating only smart components without directories specified
-    fs.writeFile(`${component}.js`, "'Hello'", err => {
+    fs.writeFile(`${component}.js`, createSmartComp(component), err => {
         if (err) throw err
         console.log('your file was created')
     })
