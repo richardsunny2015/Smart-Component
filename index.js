@@ -1,6 +1,6 @@
 const minimist = require('minimist')
 const fs = require('fs')
-const {createSmartComp} = require('./utilities')
+const {createSmartComp, appendFileExtension, parseComponentName} = require('./utilities')
 
 module.exports = () => {
     const args = minimist(process.argv.slice(2)) // no flags saves all arguments in '_' property
